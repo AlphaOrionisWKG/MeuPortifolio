@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+    <link rel="shortcut icon" type="imagex/png" href="/Portifolio/imgs/logo.png">
+    <link rel="stylesheet" type="text/css" href="/Portifolio/index.css" />
+
+
+</head>
+<body>
+    <body class="gradient-bg">
+        
+    <nav>
+        <img src="/Portifolio/imgs/logo.png" alt="Logotipo" id="logo">
+        <ul>
+            <li><a onclick="mostrarSecao('port')" id="nav-port">Pedra Papel e Tesoura?</a></li>
+            <li><a onclick="mostrarSecao('sobre')" id="nav-sobre">Curiosidades do Brasil!</a></li>
+            <li><a onclick="mostrarSecao('obj')" id="nav-obj">Magia Branca</a></li>
+            <li><a onclick="mostrarSecao('contato')" id="nav-contato">Ligue as Luzes</a></li>
+        </ul>
+    </nav>
+
+    <section id="port">
+        <h2> Pedra Papel e Tesoura Simples!</h2>
+        <p>Vai tentar a sorte ?</p>
+        <p>Escolha sua opção:</p>
+    <button id="rock">🪨 Pedra (1)</button>
+    <button id="paper">📄 Papel (2)</button>
+    <button id="scissors">✂️ Tesoura (3)</button>
+
+    <p id="result">Resultado: <span id="gameResult">?</span></p>
+
+        <script>
+            let userChoice;
+
+            document.getElementById("rock").addEventListener("click", function() {
+                userChoice = 1;
+                playGame();
+            });
+
+            document.getElementById("paper").addEventListener("click", function() {
+                userChoice = 2;
+                playGame();
+            });
+
+            document.getElementById("scissors").addEventListener("click", function() {
+                userChoice = 3;
+                playGame();
+            });
+
+            function playGame() {
+                let computerChoice = Math.floor(Math.random() * 3) + 1;
+                let result;
+
+                if (userChoice === computerChoice) {
+                    result = "Empate!";
+                } else if ((userChoice === 1 && computerChoice === 3) ||
+                        (userChoice === 2 && computerChoice === 1) ||
+                        (userChoice === 3 && computerChoice === 2)) {
+                    result = "Você ganhou!";
+                } else {
+                    result = "Você perdeu!";
+                }
+
+                document.getElementById("gameResult").textContent = result + " (Computador escolheu " + getChoiceName(computerChoice) + ")";
+            }
+
+            function getChoiceName(choice) {
+                if (choice === 1) return "🪨 Pedra";
+                if (choice === 2) return "📄 Papel";
+                if (choice === 3) return "✂️ Tesoura";
+            }
+        </script>
+    </section>
+
+    <section id="sobre">
+        <div class="">
+            <nav>
+                <ul id="minimenu">
+                    <li><a href="#p1">Inicio</a></li>
+                    <li><a href="#p2">Meio</a></li>
+                    <li><a href="#p3">Desfecho</a></li>
+                    <li><a href="#p4">Curiosidade</a></li>
+                </ul>
+            </nav>
+            <section id="brasil">
+                <h2><em>Um pouco da historia do nosso Brasil</em></h2>
+            </section>
+            <article class="img-container" >
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="Brasil" class="brasil">
+            </article>
+            
+            <div>
+                <h1 id="p1">Inicio - Curiosidades do Brasil</h1>
+                <h3>Banhado pelo Oceano Atlântico, o Brasil tem um litoral de 7 491 km[13] e faz fronteira com todos os outros países sul-americanos, exceto Chile e Equador, sendo limitado a norte pela Venezuela, Guiana, Suriname e pelo departamento ultramarino francês da Guiana Francesa; a noroeste pela Colômbia; a oeste pela Bolívia e Peru; a sudoeste pela Argentina e Paraguai e ao sul pelo Uruguai. Vários arquipélagos formam parte do território brasileiro, como o Atol das Rocas, o Arquipélago de São Pedro e São Paulo, Fernando de Noronha (o único destes habitado por civis) e Trindade e Martim Vaz.[13] O Brasil também é o lar de uma diversidade de animais selvagens, ecossistemas e de vastos recursos naturais em uma grande variedade de habitats protegidos.</h3>
+                <br>
+                <hr>
+                <h1 id="p2">Meio</h1>
+                <h3>O território que atualmente forma o Brasil foi oficialmente descoberto pelos portugueses em 22 de abril de 1500, em expedição liderada por Pedro Álvares Cabral. Segundo alguns historiadores como Antonio de Herrera e Pietro d'Anghiera, o encontro do território teria sido três meses antes, em 26 de janeiro, pelo navegador espanhol Vicente Yáñez Pinzón, durante uma expedição sob seu comando. A região, então habitada por indígenas ameríndios divididos entre milhares de grupos étnicos e linguísticos diferentes, cabia a Portugal pelo Tratado de Tordesilhas, e tornou-se uma colônia do Império Português.[16] O vínculo colonial foi rompido, de fato, quando em 1808 a capital do reino foi transferida de Lisboa para a cidade do Rio de Janeiro, depois de tropas francesas comandadas por Napoleão Bonaparte invadirem o território português.[17] Em 1815, o Brasil se torna parte de um reino unido com Portugal. Dom Pedro I, o primeiro imperador, proclamou a independência política do país em 1822. Inicialmente independente como um império, período no qual foi uma monarquia constitucional parlamentarista, o Brasil tornou-se uma república em 1889, em razão de um golpe militar chefiado pelo marechal Deodoro da Fonseca (o primeiro presidente), embora uma legislatura bicameral, agora chamada de Congresso Nacional, já existisse desde a ratificação da primeira Constituição, em 1824.[17] Desde o início do período republicano, a governança democrática foi interrompida por longos períodos de regimes autoritários, até um governo civil e eleito democraticamente assumir o poder em 1985, com o fim da ditadura militar.</h3>
+                <br>
+                <hr>
+                <h1 id="p3">Desfecho</h1>
+                <h3>Como potência regional e média,[19] a nação tem reconhecimento e influência internacional, sendo que também é classificada como uma potência global emergente[20] e como uma potencial superpotência por vários analistas.[21] O PIB nominal brasileiro é o nono maior do mundo[22] e o oitavo por paridade do poder de compra (PPC), sendo, em ambos, o maior da América Latina e do Hemisfério Sul.[23] O país é um dos principais celeiros do planeta, sendo o maior produtor de café dos últimos 150 anos,[24] além de ser classificado como uma economia de renda média-alta pelo Banco Mundial[25] e como um país recentemente industrializado, que detém a maior parcela de riqueza global e a ecomomia mais complexa da América do Sul. No entanto, o país ainda mantém níveis notáveis de corrupção, criminalidade e desigualdade social. É membro fundador da Organização das Nações Unidas (ONU), G20, BRICS, Comunidade dos Países de Língua Portuguesa (CPLP), União Latina, Organização dos Estados Americanos (OEA), Organização dos Estados Ibero-americanos (OEI) e Mercado Comum do Sul (Mercosul).</h3>
+                <br>
+                <hr>
+                <h1 id="p4">Curiosidade pré-colonial</h1>
+                <h3>Estima-se que os primeiros seres humanos tenham ocupado a região que compreende o atual território brasileiro há cerca de 60 mil anos.[31] Quando encontrada pelos europeus em 1500, a América do Sul tinha sua costa oriental habitada por cerca de dois milhões de nativos, do norte ao sul.</h3>
+                <hr>
+            </div>
+        
+        
+        
+        </div>
+        
+        
+    </section>
+
+    <section id="obj">
+        <h2>Nessa Bruxaria o Mago ira Advinhar o Que Você Pensa</h2>
+        <p>Digite algo:<p>
+    <input type="text" id="userInput" placeholder="Digite o que Você pensa aqui...">
+    <button id="sendButton">Enviar</button>
+
+    <p id="response"></p>
+
+    <script>
+        document.getElementById("sendButton").addEventListener("click", function() {
+            let userText = document.getElementById("userInput").value;
+            let responseElement = document.getElementById("response");
+
+            responseElement.textContent = "Perguntando ao Mago...";
+            
+            setTimeout(() => {
+                responseElement.textContent = "Consultando Magos Anciões...";
+            }, 2000);
+            
+            setTimeout(() => {
+                responseElement.textContent = "O Mago diz que você pensou: " + userText;
+            }, 4000);
+        });
+    </script>
+
+        
+    </section>
+
+    <section id="contato">
+        <h2>Luzes?</h2>
+        <style>
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 50px;
+                margin-top: 20px;
+            }
+    
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 10px;
+                max-width: 200px;
+            }
+    
+            .grid input[type="checkbox"], .grid .emoji {
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                font-size: 24px;
+                line-height: 40px;
+                cursor: pointer;
+            }
+    
+            .grid input[type="checkbox"]:disabled {
+                cursor: not-allowed;
+            }
+    
+            .lamp {
+                text-align: center;
+                font-size: 50px;
+                margin-top: 20px;
+                color: gray;
+                display: none; /* Lâmpada escondida inicialmente */
+            }
+    
+            .lamp.activated {
+                color: gold;
+                display: block; /* Exibir lâmpada quando ativada */
+            }
+        </style>
+    </head>
+    
+    
+    <div class="container">
+        <div class="grid">
+            <!-- Grid 5x5 com raio no início e lâmpada no final -->
+            <div class="emoji">⚡</div>
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+    
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+    
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+    
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+    
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+            <input type="checkbox" disabled>
+            <div class="emoji" id="final">🔌</div>
+            <div class="lamp" id="lampada">💡</div>
+        </div>
+    
+        
+    </div>
+    
+    <script>
+        const checkboxes = document.querySelectorAll('.grid input[type="checkbox"]');
+        const lamp = document.getElementById('lampada');
+        const finalEmoji = document.getElementById('final');
+    
+        // Função que ativa os checkboxes adjacentes
+        function ativarAdjacentes(index) {
+            const linhas = 5;
+            const colunas = 5;
+            
+            // Função para ativar um checkbox se estiver adjacente a um energizado
+            function ativarSeAdjacente(indiceAtual, indicesAdjacentes) {
+                if (checkboxes[indiceAtual].checked) {
+                    indicesAdjacentes.forEach(i => {
+                        if (i >= 0 && i < linhas * colunas) {
+                            checkboxes[i].disabled = false;
+                        }
+                    });
+                }
+            }
+    
+            // Calcular índices adjacentes (esquerda, direita, cima, baixo)
+            const esquerda = index - 1;
+            const direita = index + 1;
+            const cima = index - colunas;
+            const baixo = index + colunas;
+    
+            // Ativar checkboxes adjacentes
+            ativarSeAdjacente(index, [esquerda, direita, cima, baixo]);
+    
+            // Verificar se a última checkbox foi ativada
+            if (checkboxes[checkboxes.length - 1].checked) {
+                lamp.classList.add('activated');
+                finalEmoji.textContent = '💡';
+            }
+        }
+    
+        // Iniciar o processo ao clicar no primeiro checkbox
+        checkboxes[0].disabled = false;
+        checkboxes.forEach((checkbox, index) => {
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    ativarAdjacentes(index);
+                }
+            });
+        });
+    </script>
+        
+    </section>
+
+    </body>
+
+    </div>
+
+    <footer>Todos os direitos reservados. Última Atualização em Agosto de 2024.</footer>
+
+    <script src="/Portifolio/script.js"></script>
+</body>
+</html>

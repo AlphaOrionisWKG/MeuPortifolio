@@ -1,0 +1,177 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Ajustado para combinar com o tema escuro */
+    color: #ffffff;
+}
+
+/* Estilo do menu de navegação */
+nav {
+    position: sticky;
+    top: 0; /* Mantém o menu fixo no topo ao rolar a página */
+    background-color: #121212;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000; /* Garantia de sobreposição em relação ao conteúdo */
+}
+
+nav img {
+    height: 40px;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #333333;
+    color: #cccccc;
+    transform: scale(1.1);
+}
+
+/* Estilo das seções */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: #1e1e1e; /* Fundo da seção para destacar o conteúdo */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none; /* Seções inicialmente escondidas */
+}
+
+/* Ajuste do estilo do título */
+h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+}
+
+/* Estilo dos parágrafos */
+p {
+    margin-bottom: 20px;
+}
+
+/* Estilo das imagens */
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img {
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* Estilo das imagens na seção 'linguagens' */
+#linguagens img {
+    width: 60px;
+}
+
+
+/* Estilo da imagem do logotipo na seção "Sobre Mim" */
+.logotipo {
+    display: block;
+    margin: 0 auto 30px;
+    width: 300px;
+}
+
+/* Estilo das imagens na seção 'sistemas' */
+#sistemas img {
+    width: 300px;
+}
+
+/* Estilo do rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #121212;
+    color: #ffffff;
+    position: relative; /* Ajuste para evitar sobreposição */
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+/* Gradientes e efeitos visuais */
+.gradients-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Mantém os gradientes no fundo */
+}
+
+.noiseBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0; /* Z-index mais baixo para que o conteúdo fique sobreposto */
+}
+
+.svgBlur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0; /* Mesmo z-index do noiseBg para garantir o fundo */
+}
+#minimenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between; /* Distribui os itens com espaço entre eles */
+  align-items: center; /* Alinha os itens ao centro verticalmente */
+}
+
+#minimenu li {
+  display: inline;
+}
+
+#minimenu li a {
+  text-decoration: none;
+  padding: 8px 12px;
+  color: #000; /* Cor do texto */
+  background-color: #e0e0e0; /* Cor de fundo */
+  border-radius: 4px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease; /* Animação de transição */
+}
+
+#minimenu li a:hover {
+  background-color: #d4af37; /* Cor de fundo ao passar o mouse */
+  color: #fff; /* Cor do texto ao passar o mouse */
+}
